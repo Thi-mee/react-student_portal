@@ -1,0 +1,4 @@
+.dashboard__boxes{
+  display: flex;
+  gap: 2em;
+}

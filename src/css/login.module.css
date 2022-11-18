@@ -1,0 +1,42 @@
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  width: 50%;
+  max-width: 500px;
+  min-width: 350px;
+  background-image: linear-gradient(120deg, #795b3fb7, #c29a758e);
+  color: #ccc;
+  padding: 3em;
+  border-radius: 1em;
+}
+
+.form__group{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-block: 1em;
+}
+.form__group input{
+  color: #555;
+  width: 100%;
+  padding: .5rem;
+}
+.form button{
+  padding: .5rem 2em;
+  margin-top: 1em;
+  float: right;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.err__Message{
+  font-size: .9rem;
+  color: rgb(249, 67, 67);
+}
