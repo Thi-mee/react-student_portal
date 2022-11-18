@@ -1,4 +1,4 @@
-aside{
+.side__bar{
   padding-inline: .8em;
   background-color: #555;
   width: 100%;
@@ -6,22 +6,22 @@ aside{
   min-width: var(--sidebar-width);
   max-width: 250px;
 }
-aside .side__bar__image{
+.side__bar__image{
   border-radius: 50%;
   width: 50%;
   margin: 2em auto 0;
   overflow: hidden;
 }
-aside h3{
+.side__bar h3{
   font-size: 1.1em;
   margin: .5em;
   text-align: center;
 }
-aside .side__bar__image img{
+.side__bar .side__bar__image img{
   width: 100%;
   height: auto;
 }
-aside .side__bar__links{
+.side__bar .side__bar__links{
   display: flex;
   flex-direction: column;
   gap: .5em;
