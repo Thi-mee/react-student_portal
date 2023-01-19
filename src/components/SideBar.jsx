@@ -1,15 +1,11 @@
 import { Link } from 'react-router-dom';
-import dp from '../assets/profilepics.JPG'
+
 import style from '../css/sidebar.module.css'
 
 const SideBar = props => {
   
   return (
     <aside className={style.side__bar}>
-      <div className={style.side__bar__image}>
-        <img src={dp} alt="profile" />
-      </div>
-      <h3>{props.name}</h3>
       
       <div className={style.side__bar__links}>
         <Link to="/" className={style.side__bar__link}>  DashBoard  </Link>

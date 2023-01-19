@@ -1,0 +1,122 @@
+.nav {
+  height: var(--nav-height);
+  position: fixed;
+  width: 100%;
+  background-color: var(--nav-color);
+  color: var(--primary-text-color);
+  /* color: rgb(23, 16, 41); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+@media screen and (width > 768px) {
+  .nav .hamburgerMenu {
+    display: none;
+    position: block;
+  }
+  .nav {
+    justify-content: space-between;
+  }
+}
+
+.hamburgerMenu {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  height: 28px;
+  width: 26px;
+  padding: .1em;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.hamburgerMenu__line {
+  height: 3px;
+  background-color: var(--primary-text-color);
+  width: 100%;
+  position: relative;
+  pointer-events: none;
+  transform: background-color 0.3s ease-in-out;
+}
+.hamburgerMenu__line::before,
+.hamburgerMenu__line::after {
+  content: "";
+  position: absolute;
+  background-color: var(--primary-text-color);
+  inset: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;
+}
+.hamburgerMenu__line::before {
+  transform: translateY(-8px);
+}
+.hamburgerMenu__line::after {
+  transform: translateY(8px);
+}
+.hamburgerMenu.open .hamburgerMenu__line {
+  background-color: transparent;
+}
+.hamburgerMenu.open .hamburgerMenu__line::before {
+  transform: rotate(45deg) translateY(0px);
+}
+.hamburgerMenu.open .hamburgerMenu__line::after {
+  transform: rotate(-45deg) translateY(0px);
+}
+
+.mobileNav {
+  
+  position: fixed;
+  padding-top: var(--nav-height);
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  right: 100%;
+  z-index: 50;
+  background-color: #fff;
+  transition: right 0.3s ease-in-out;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.mobileNav > * {
+  padding: 1em;
+}
+.mobileNav > *:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+.mobileNav.show {
+  right: 0;
+}
+.searchBox {
+  position: relative;
+}
+.searchBox label {
+  position: absolute;
+  top: 50%;
+  left: 2em;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.searchBox input {
+  width: 100%;
+  padding: 1em;
+  padding-left: 3.3em;
+  border: none;
+  border-radius: 2em;
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: #c1c1c1;
+}
+.searchBox input::placeholder {
+  color: rgb(46, 46, 46);
+}
+
+
+.hide {
+  display: none;
+}

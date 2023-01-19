@@ -1,0 +1,21 @@
+.table {
+  border: 1px solid red;
+  width: 90%;
+  margin: 2em auto 0;
+}
+.table th{
+  background-color: #444;
+  color: #ddd;
+}
+.table tr:nth-child(2n) {
+  background-color: rgb(196, 196, 196);
+}
+.table td{
+  padding: .5em 1em;
+}
+.table th {
+  padding: 0 1em;
+}
+.table tr > *:first-child{
+  width: 30px;
+}

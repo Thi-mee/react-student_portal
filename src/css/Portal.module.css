@@ -1,0 +1,9 @@
+.page__flex {
+  padding-top: var(--nav-height);
+  display: flex;
+  min-height: 100vh;
+}
+.page__flex main {
+  flex: 1;
+  padding: 0 1em;
+}

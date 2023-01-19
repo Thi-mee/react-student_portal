@@ -1,16 +1,18 @@
-import React from 'react'
 import Navbar from '../components/Navbar'
 import SideBar from '../components/SideBar'
 import { Outlet} from 'react-router-dom';
+import style from '../css/Portal.module.css'
 
 const Portal = () => {
   let profileName = "Ore Adewusi"
   return (
     <>
       <Navbar />
-      <div className='page__flex'>
+      <div className={style.page__flex}>
         <SideBar name={profileName} />
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
       </div>
     </>
   )

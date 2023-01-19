@@ -1,0 +1,11 @@
+.imagebox {
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.imagebox img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,4 +1,24 @@
-.container{
+.page {
+  background-color: #f1f1f1;
+  min-height: 100vh;
+}
+.page nav {
+  width: 100%;
+  background-color: #fff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 3em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.page nav a {
+  color: rgb(35, 17, 174);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -7,36 +27,50 @@
   align-items: center;
 }
 
-.form{
-  width: 50%;
-  max-width: 500px;
+.form {
+  width: 60%;
+  max-width: 600px;
   min-width: 350px;
-  background-image: linear-gradient(120deg, #795b3fb7, #c29a758e);
-  color: #ccc;
+  background-color: #fff;
+  color: rgb(47, 47, 47);
   padding: 3em;
-  border-radius: 1em;
+  border-radius: 0.2em;
 }
 
-.form__group{
+.form__group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-block: 1em;
 }
-.form__group input{
-  color: #555;
-  width: 100%;
-  padding: .5rem;
+
+:where(.form__group input) {
+  background-color: #eee;
+  font-size: 1rem;
+  border-radius: 0.4em;
+  padding: 0.75em 1em;
+  border: 0;
+  outline: 0;
+  border: 2px solid #eee;
 }
-.form button{
-  padding: .5rem 2em;
+:where(.form__group input:focus) {
+  outline: none;
+  background-color: #fff;
+  border: 2px solid rgba(35, 17, 174, 0.418);
+}
+.form__group input {
+  color: #555;
+  width: 100%;  
+}
+.form button {
+  padding: 0.5rem 2em;
   margin-top: 1em;
   float: right;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-.err__Message{
-  font-size: .9rem;
+.err__Message {
+  font-size: 0.9rem;
   color: rgb(249, 67, 67);
 }
